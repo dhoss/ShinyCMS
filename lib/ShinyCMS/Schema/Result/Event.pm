@@ -119,6 +119,21 @@ __PACKAGE__->set_primary_key("id");
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:hzZ/SswKJTFNCNnYjmhGYw
 
 
+__PACKAGE__->add_columns(
+    "start_date",
+    {
+        data_type     => "datetime",
+        set_on_create => 1,
+        is_nullable   => 0,
+    },
+    "end_date",
+    {
+        data_type     => "datetime",
+        set_on_create => 1,
+        is_nullable   => 0,
+    },
+);
+
 # You can replace this text with custom content, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;
 1;

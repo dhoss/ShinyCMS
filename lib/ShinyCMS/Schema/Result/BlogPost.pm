@@ -158,6 +158,15 @@ __PACKAGE__->belongs_to(
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:DH+fL73Ll8qT7jcXgL0itQ
 
 
+__PACKAGE__->add_column(
+    "posted",
+    {
+        data_type     => "datetime",
+        set_on_create => 1,
+        is_nullable   => 0,
+    },
+);
+
 =head2 comment_count
 
 Return the total number of comments on this post

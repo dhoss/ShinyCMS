@@ -78,6 +78,14 @@ __PACKAGE__->set_primary_key("id");
 # Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-08-04 00:50:25
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:FKj70fEB5eOHZzAkaoLy6Q
 
+__PACKAGE__->add_column(
+	"uploaded",
+    {
+        data_type     => "datetime",
+        set_on_create => 1,
+        is_nullable   => 0,
+    },
+);
 
 
 # EOF
